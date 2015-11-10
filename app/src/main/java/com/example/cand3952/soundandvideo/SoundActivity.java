@@ -34,7 +34,7 @@ public class SoundActivity extends Activity
         stopButton = (Button) findViewById(R.id.stopButton);
         soundSeekBar = (SeekBar) findViewById(R.id.soundSeekBar);
         videoButton = (Button) findViewById(R.id.videoButton);
-        soundPlayer = MediaPlayer.create(this.getBaseContext(), R.raw.pomdeter);
+        soundPlayer = MediaPlayer.create(this.getBaseContext(), R.raw.tunak);
 
         setupListeners();
 
@@ -64,13 +64,11 @@ public class SoundActivity extends Activity
         });
 
 
-        stopButton.setOnClickListener(new View.OnClickListener()
-        {
+        stopButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 soundPlayer.stop();
-                soundPlayer = MediaPlayer.create(getBaseContext(), R.raw.pomdeter);
+                soundPlayer = MediaPlayer.create(getBaseContext(), R.raw.tunak);
             }
         });
 
@@ -132,6 +130,16 @@ public class SoundActivity extends Activity
             soundSeekBar.setProgress(currentPosition);
         }
     }
+
+
+
+
+
+
+
+
+
+
 
 
     @Override

@@ -1,20 +1,36 @@
 package com.example.cand3952.soundandvideo;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.MenuItem;
+import android.view.Menu;
+import android.widget.*;
+import android.net.Uri;
 
-public class VideoActivity extends AppCompatActivity {
+
+
+
+
+public class VideoActivity extends Activity
+{
+
+    private VideoView myPlayer;
+    private Button returnButton;
+    private MediaController myVideoController;
+    private Uri videoLocation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_video);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        myPlayer = (VideoView) findViewById(R.id.videoView);
+        returnButton = (Button) findViewById(R.id.homeButton);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
