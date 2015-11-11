@@ -3,15 +3,13 @@ package com.example.cand3952.soundandvideo;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.*;
 import android.media.MediaPlayer;
 
-public class SoundActivity extends Activity
+public class SoundActivity extends Activity implements Runnable
 {
     private Button startButton;
     private Button stopButton;
@@ -38,7 +36,7 @@ public class SoundActivity extends Activity
 
         setupListeners();
 
-        soundThread = new Thread(this);
+        soundThread = new Thread(this);  //Needs "implements runnable"
         soundThread.start();
 
     }
@@ -106,7 +104,7 @@ public class SoundActivity extends Activity
 
 
     @Override
-    public void run()
+    public void run()       // Needs "implements Runnable"
     {
         int currentPosition = 0;
         int soundTotal = soundPlayer.getDuration();
