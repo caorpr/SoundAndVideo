@@ -3,8 +3,7 @@ package com.example.cand3952.soundandvideo;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.MenuItem;
-import android.view.Menu;
+
 import android.widget.*;
 import android.net.Uri;
 import android.content.Intent;
