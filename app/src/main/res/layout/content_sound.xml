@@ -26,30 +26,30 @@
         android:layout_height="wrap_content"
         android:text="Play"
         android:id="@+id/playButton"
+        android:background="#3a9f1e"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="#3a9f1e" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pause"
         android:id="@+id/pauseButton"
-        android:layout_alignTop="@+id/playButton"
-        android:layout_centerHorizontal="true"
         android:allowUndo="true"
-        android:background="#520a4c" />
+        android:background="#520a4c"
+        android:layout_below="@+id/soundSeekBar"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/stopButton"
         android:text="Stop"
+        android:background="#de1215"
         android:layout_alignTop="@+id/pauseButton"
-        android:layout_toRightOf="@+id/videoButton"
-        android:layout_toEndOf="@+id/videoButton"
-        android:background="#de1215" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"

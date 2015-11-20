@@ -1,5 +1,9 @@
 package com.example.cand3952.soundandvideo;
 
+/**
+ * version 1.1
+ */
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +31,11 @@ public class SoundActivity extends Activity implements Runnable
         setContentView(R.layout.content_sound);
 
 
+        /**
+         * Initializing all the GUI components
+         *
+         */
+
         startButton = (Button) findViewById(R.id.playButton);
         pauseButton = (Button) findViewById(R.id.pauseButton);
         stopButton = (Button) findViewById(R.id.stopButton);
@@ -40,6 +49,10 @@ public class SoundActivity extends Activity implements Runnable
         soundThread.start();
 
     }
+
+    /**
+     * Sets up all the listeners for the GUI components
+     */
 
     private void setupListeners()
     {
@@ -84,12 +97,12 @@ public class SoundActivity extends Activity implements Runnable
 
         soundSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-            }
+            public void onStopTrackingTouch(SeekBar seekBar)
+            {}
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-            }
+            public void onStartTrackingTouch(SeekBar seekBar)
+            {}
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -101,10 +114,13 @@ public class SoundActivity extends Activity implements Runnable
     }
 
 
+    /**
+     *
+     */
 
 
     @Override
-    public void run()       // Needs "implements Runnable"
+    public void run()       // Needs "implements Runnable after extends activity."
     {
         int currentPosition = 0;
         int soundTotal = soundPlayer.getDuration();
@@ -130,15 +146,11 @@ public class SoundActivity extends Activity implements Runnable
     }
 
 
-
-
-
-
-
-
-
-
-
+    /**
+     *
+     * @param menu
+     * @return
+     */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -146,6 +158,12 @@ public class SoundActivity extends Activity implements Runnable
         getMenuInflater().inflate(R.menu.menu_sound, menu);
         return true;
     }
+
+    /**
+     *
+     * @param item
+     * @return
+     */
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

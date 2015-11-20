@@ -2,4 +2,6 @@
     <string name="app_name">SoundAndVideo</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_video">VideoActivity</string>
+    <string name="title_activity_music">MusicActivity</string>
+    <string name="title_activity_second_sound">SecondSoundActivity</string>
 </resources>
