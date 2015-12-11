@@ -13,6 +13,10 @@ import android.media.MediaPlayer;
 
 public class SecondSoundActivity extends Activity implements Runnable
 {
+
+    /**
+     * Calling all the GUI components
+     */
     private Button homeButton;
     private Button startButton;
     private Button stopButton;
@@ -21,8 +25,10 @@ public class SecondSoundActivity extends Activity implements Runnable
     private Thread soundThread;
 
 
-
-
+    /**
+     * Connecting the GUI stuff with what is in the code
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +48,9 @@ public class SecondSoundActivity extends Activity implements Runnable
 
     }
 
+    /**
+     * Tells what the GUI to do when it is activated
+     */
     private void setupListeners()
     {
         startButton.setOnClickListener(new View.OnClickListener()
@@ -82,6 +91,9 @@ public class SecondSoundActivity extends Activity implements Runnable
     }
 
 
+    /**
+     * Runs the video player/song
+     */
     private void run()
     {
         int currentPosition = 0;

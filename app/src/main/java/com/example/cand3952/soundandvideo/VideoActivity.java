@@ -15,12 +15,19 @@ import android.content.Intent;
 public class VideoActivity extends Activity
 {
 
+    /**
+     * Calling the GUI components
+     */
     private VideoView myPlayer;
     private Button returnButton;
     private MediaController myVideoController;
     private Uri videoLocation;
 
 
+    /**
+     * calling methods, super.onCreate, and connecting GUI stuff to the code.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -37,12 +44,18 @@ public class VideoActivity extends Activity
         setupListeners();
     }
 
+    /**
+     * sets up the video/sound player
+     */
     private void setupMedia()
     {
         myPlayer.setMediaController(myVideoController);
         myPlayer.setVideoURI(videoLocation);
     }
 
+    /**
+     * tells the GUI components what to do when they are activated
+     */
     private void setupListeners()
     {
         returnButton.setOnClickListener(new View.OnClickListener()
